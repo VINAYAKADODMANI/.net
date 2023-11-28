@@ -1,0 +1,60 @@
+part 2 intro c# and .net
+/////////////////////////////////////////////
+INtroduction C#
+  - c# is a lnag that targets one and only one platform namely .NET
+  - doesnt restricted to windows
+    .NET impli s also on other OS like Linux
+
+  - C# derives its's power from .NET and te framework class library
+  - The most sililar lang to c# is java
+  - Native machine code means they hav alreeady writtern the code in other lang and they want to execute there
+  - There is one fundamental differences
+    Java runs on virtual machine code
+    where as C# on native machine code
+  /////////////////////////////////////
+  WRITING APPLICATION IN C#
+
+  - An application in C# can be one of three types
+    *console application(.exe)
+    *Windows application(.exe)  like applet file
+    *Library of types(.dll)
+      here the dll is not executable
+     
+      
+
+--Example 1 - A Console application
+   -These 3 types exclude the more advanced web based application.This example inputd a number from the console and sisplays the sqroot back to the console
+   -Uses a simple iterative algo rather than calling a Math library function.
+
+using system;
+class Square_Root{
+  static void Main(string[] args){
+      double a,root;
+      do{
+         Console.Write("ENter the number.");
+         a=Convert.ToDouble(Console.ReadLine());
+         if(a<0)
+         Console.WriteLine("ENte rthe positive number");
+      }while(a<0);
+      root=a/2;
+      double root_old;
+      do{
+        root_old=root;
+        root=(root_old+a/root_old)/2;
+      
+      }while(Math.Abs(root_old-root)>1.0E-6);
+      Console.WriteLine("The square root of "+a+"is"+root);
+  
+  }
+}
+
+
+
+
+
+
+
+
+
+   
+  
